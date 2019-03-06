@@ -14,4 +14,10 @@ export class OfertasService {
                         .toPromise()
                         .then((resposta: any) => resposta.json());
     }
+
+    public getOfertasComDestaque(): Promise<Array<Oferta>> {
+        return this.http.get(`${this.url}?destaque=true`)
+                        .toPromise()
+                        .then((resposta: any) => resposta.json());
+    }
 }
