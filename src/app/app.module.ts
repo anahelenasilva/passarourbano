@@ -13,6 +13,7 @@ import { RestaurantesComponent } from './restaurantes/restaurantes.component';
 import { OfertaComponent } from './oferta/oferta.component';
 import { ComoUsarComponent } from './oferta/como-usar/como-usar.component';
 import { OndeFicaComponent } from './oferta/onde-fica/onde-fica.component';
+import { OrdemCompraComponent } from './ordem-compra/ordem-compra.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { OndeFicaComponent } from './oferta/onde-fica/onde-fica.component';
     OfertaComponent,
     ComoUsarComponent,
     OndeFicaComponent,
-    DescricaoReduzida
+    DescricaoReduzida,
+    OrdemCompraComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,7 @@ import { OndeFicaComponent } from './oferta/onde-fica/onde-fica.component';
     HttpModule
   ],
   providers: [
-    { provide: LOCALE_ID, useValue: 'pt-Br' }
+    // { provide: LOCALE_ID, useValue: 'pt-br' }
   ],
   bootstrap: [AppComponent]
 })

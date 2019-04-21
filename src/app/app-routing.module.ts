@@ -1,3 +1,4 @@
+import { OrdemCompraComponent } from './ordem-compra/ordem-compra.component';
 import { OndeFicaComponent } from './oferta/onde-fica/onde-fica.component';
 import { OfertaComponent } from './oferta/oferta.component';
 import { DiversaoComponent } from './diversao/diversao.component';
@@ -17,7 +18,8 @@ const routes: Routes = [
                     { path: 'onde-fica', component: OndeFicaComponent },
                     { path: 'como-usar', component: ComoUsarComponent }
                   ]
-  }
+  },
+  { path: 'ordem-compra', component: OrdemCompraComponent },
 ];
 
 @NgModule({
