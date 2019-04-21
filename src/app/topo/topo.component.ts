@@ -15,7 +15,6 @@ export class TopoComponent implements OnInit {
   constructor(private service: OfertasService) { }
 
   ofertas: Observable<Oferta[]>;
-  ofertasPesquisa: Oferta[];
   private subjectPesquisa: Subject<string> = new Subject<string>();
 
   ngOnInit() {
@@ -35,10 +34,6 @@ export class TopoComponent implements OnInit {
           return of<Oferta[]>([]);
         })
     );
-
-    this.ofertas.subscribe((ofertas: Oferta[]) => {
-      this.ofertasPesquisa = ofertas;
-    });
   }
 
   public pesquisar(valorPesquisaOferta: string): void {
