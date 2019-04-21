@@ -36,7 +36,7 @@ export class OfertaComponent implements OnInit, OnDestroy {
       (erro: any) => console.log(erro),
       () => console.log('O processamento foi concluído com sucesso'));*/
 
-      let teste = Observable.create((observer: Observer<string>) => {
+     /* let teste = Observable.create((observer: Observer<string>) => {
         observer.next('Primeiro evento da stream');
         // observer.error('Ocorreu um erro');
         observer.complete();
@@ -46,11 +46,11 @@ export class OfertaComponent implements OnInit, OnDestroy {
         (resultado: any) => console.log(resultado),
         (erro: string) => console.log(erro),
         () => console.log('Finalizou')
-      );
+      );*/
   }
 
   ngOnDestroy(): void {
-    this.testeSubscription.unsubscribe();
+    // this.testeSubscription.unsubscribe();
   }
 
 }
