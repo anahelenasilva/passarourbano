@@ -23,7 +23,7 @@ export class TopoComponent implements OnInit {
         debounceTime(1000), // 1 segundo
         distinctUntilChanged(),
         switchMap(valorPesquisa => {
-          if (valorPesquisa.trim() !== '') {
+          if (valorPesquisa != null && valorPesquisa.trim() !== '') {
             return this.service.pesquisarOfertas(valorPesquisa);
           }
 
@@ -47,4 +47,7 @@ export class TopoComponent implements OnInit {
     this.subjectPesquisa.next(valorPesquisaOferta);
   }
 
+  limparPesquisa() {
+    this.subjectPesquisa.next('');
+  }
 }
