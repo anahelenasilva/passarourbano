@@ -1,3 +1,4 @@
+import { DescricaoReduzida } from './shared/descricao-reduzida.pipe';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpModule } from '@angular/http';
@@ -23,7 +24,8 @@ import { OndeFicaComponent } from './oferta/onde-fica/onde-fica.component';
     RestaurantesComponent,
     OfertaComponent,
     ComoUsarComponent,
-    OndeFicaComponent
+    OndeFicaComponent,
+    DescricaoReduzida
   ],
   imports: [
     BrowserModule,
